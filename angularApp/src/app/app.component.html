@@ -1,0 +1,116 @@
+<button (click)="onhourlyClick()">Hourly Employees</button>
+<br/>
+<br/>
+<button (click)="onSalariedClick()">SalariedEmployees</button>
+<br/>
+<br/>
+<button (click)="onManager()">Managers</button>
+<br/>
+<br/>
+<h2 *ngIf="hourlycount==1 && managercount==0 && salariedcount==0">Hourly Employee Details</h2>
+<table class="table table-striped" border="1" *ngIf="hourlycount==1 && managercount==0 && salariedcount==0">
+  <thead>
+  <tr>
+      <th>
+        Employee No
+      </th>
+      <th>
+        Employee Name
+      </th>
+      <th>
+        VacationDays based on Working days
+         </th>
+         <th>
+          totalVacationDaysRemained
+           </th>
+           <th>
+            Salary
+             </th>
+  </tr>
+  </thead>
+  <tbody>     
+  <tr *ngFor="let item of employees let i=index">
+      <td>{{item.empNo}}</td>
+      <td>{{item.empName}}</td>
+      <td>{{item.vacationDays}}</td>
+      <td>{{item.totalVacDaysRemained}}</td>
+      <td>{{item.salary}}</td>
+  </tr>
+  </tbody>
+
+</table>
+
+
+
+
+<br/>
+<br/>
+<h2 *ngIf="salariedcount==1 && hourlycount==0 && managercount==0">Salaried Employee Details</h2>
+<table class="table table-striped" border="1" *ngIf="salariedcount==1 && hourlycount==0 && managercount==0">
+  <thead>
+  <tr>
+      <th>
+        Employee No
+      </th>
+      <th>
+        Employee Name
+      </th>
+      <th>
+        VacationDays based on Working days
+         </th>
+         <th>
+          totalVacationDaysRemained
+           </th>
+           <th>
+            Salary
+             </th>
+  </tr>
+  </thead>
+  <tbody>     
+  <tr *ngFor="let item of employees; let i=index">
+      <td>{{item.empNo}}</td>
+      <td>{{item.empName}}</td>
+      <td>{{item.vacationDays}}</td>
+      <td>{{item.totalVacDaysRemained}}</td>
+      <td>{{item.salary}}</td>
+  </tr>
+  </tbody>
+
+</table>
+
+
+
+<br/>
+<br/>
+<h2 *ngIf="managercount==1 && hourlycount==0 && salariedcount==0">Managers Details</h2>
+<table class="table table-striped" border="1" *ngIf="managercount==1 && hourlycount==0 && salariedcount==0">
+  <thead>
+  <tr>
+      <th>
+        Employee No
+      </th>
+      <th>
+        Employee Name
+      </th>
+      <th>
+        VacationDays based on Working days
+         </th>
+         <th>
+          totalVacationDaysRemained
+           </th>
+           <th>
+            Salary
+             </th>
+  </tr>
+  </thead>
+  <tbody>     
+  <tr *ngFor="let item of employees; let i=index">
+      <td>{{item.empNo}}</td>
+      <td>{{item.empName}}</td>
+      <td>{{item.vacationDays}}</td>
+      <td>{{item.totalVacDaysRemained}}</td>
+      <td>{{item.salary}}</td>
+  </tr>
+  </tbody>
+
+</table>
